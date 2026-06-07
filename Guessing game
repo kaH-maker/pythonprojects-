@@ -1,0 +1,32 @@
+
+
+valid_codes=["ata","lam","marine"]
+code=input("enter the code :")
+
+
+for i in valid_codes :
+    
+    if i==code :
+        print("access granted ")
+        break
+        
+else :
+        print("wrong password  access denied ")
+        
+ # another game , wanted to make it loop      
+valid_codes=["ata","lam","marine"]
+code=input("enter the code :")
+found=False
+
+for i in valid_codes :
+    
+    if i==code :
+        
+        found=True
+        break
+
+if found :
+    print("hello ")       
+else :
+    print("wrong")             
+                
