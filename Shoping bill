@@ -1,0 +1,19 @@
+items=["milk","cheese","meat"]
+prices=[10,100,230]
+
+for i in range(len(items)) :
+    print(f" {items[i]} - {prices[i]}")
+    
+
+ask=int(input("how many items do you wants to buy :"))    
+pick=[]
+
+total=0
+
+for n in range(ask) :
+    item=input("what item do you wants :")
+    pick.append(item)
+    position=items.index(item)
+    price=prices[position]
+    total+=price
+print(total)    
