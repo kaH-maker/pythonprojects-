@@ -1,0 +1,23 @@
+def calculate(num1,num2,oprator) :
+ if oprator=="+" :
+     return num1+num2
+ elif oprator=="-" :
+     return num1-num2
+ elif oprator=="*" :
+     return num1*num2
+ elif oprator=="/" :
+     if num2==0 :
+         print("error, can not divide by zero ")
+     else :
+         return num1/num2
+         
+# didn't made it error tolerate       
+while True :
+ num1=float(input("enter first number :"))
+ num2=float(input("enter second number :"))
+ oprator=input("choose from : 1. + ,2. - , 3. * ,4. / , 5.exit :")
+ if oprator== "exit" :
+     break
+ else :
+     result=calculate(num1,num2,oprator)
+ print(result)
