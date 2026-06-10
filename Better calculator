@@ -1,0 +1,33 @@
+def cal(num1,num2,opration) :
+    if opration == "+" or opration == "1" :
+        return num1+num2 
+    elif opration == "-" or opration == "2" :
+        return num1-num2 
+    elif opration == "*" or opration == "3" :
+         return num1*num2 
+    elif opration == "/" or opration == "4" :
+         if num2 == 0 :
+             return "denominator as zero is not acceptable "
+         else :
+             return num1/num2    
+           
+
+             
+while True :
+    try:
+        num1=float(input("enter first number :")) 
+        num2=float(input("enter second number :"))
+        opration=input("choose your oprator : 1. '+', 2.   '-', 3.'*', 4. '/' :  ")
+    except :
+        print("invalid input , check your inputs !")
+        continue 
+        
+    print(cal(num1,num2,opration))
+    user_confirmation=input("if wants to continue , type yes or y ! or type e to exit  : ")      
+    if user_confirmation == "exit" or user_confirmation == "e"  :
+      print("thank you for the use (:")
+      break
+    else :
+      continue
+print(cal(num1,num2,opration))      
+        
