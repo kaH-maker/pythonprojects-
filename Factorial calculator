@@ -1,0 +1,13 @@
+num=int(input("enter the factorial number :"))
+mult=1
+
+while True :
+    result=num*mult
+    
+    num , mult = num-1 , result 
+    
+    if  num<= 1:
+        print(result)
+        break
+    
+
