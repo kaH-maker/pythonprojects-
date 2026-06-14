@@ -1,0 +1,31 @@
+small_num=100
+
+limit=int(big_num) 
+
+def sieve(limit):
+    if limit < 2:
+        return []
+        
+    is_prime = [True] * (limit + 1)
+    is_prime[0] = is_prime[1] = False
+    
+    for p in range(2, int(limit**0.5) + 1):
+        if is_prime[p]:
+            for multiple in range(p * p, limit + 1, p):
+                is_prime[multiple] = False
+                
+    prime=[i for i in range(limit+1) if is_prime[i]]
+    return prime 
+    
+my_primes=sieve(limit)
+print("the prime numbers are :", my_primes)  
+
+print(f"there are {len(my_primes)} prime numbers up to {limit} .")    
+
+
+for p in reversed(my_primes) :
+    if big_num%p == 0 :
+        print(f"largets prime factor is : {p}")
+        break
+
+
